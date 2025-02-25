@@ -1,46 +1,55 @@
+<!-- Updated HTML with St. Thomas Logo inside ID Card and Fixed Menu -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University of St. Thomas - Digital ID</title>
+    <title>University of St. Thomas ID</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <div class="menu" id="menu">
-        <span class="close-menu" onclick="toggleMenu()">✖</span>
-        <ul>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <ul id="menu" class="hidden">
             <li><a href="account-balance.html">Account Balance</a></li>
             <li><a href="class-schedule.html">Class Schedule</a></li>
-            <li><a href="#">Campus Resources</a></li>
+            <li><a href="campus-resources.html">Campus Resources</a></li>
         </ul>
-    </div>
-
+    </nav>
+    
     <div class="id-card">
-        <h2>University of St. Thomas</h2>
-        <img id="profile-pic" src="profile-placeholder.png" onclick="document.getElementById('profile-pic-upload').click();">
-        <input type="file" id="profile-pic-upload" accept="image/*" onchange="uploadProfilePic(event)">
-        <p><strong>Name:</strong> John Doe</p>
-        <p><strong>Student ID:</strong> 123456789</p>
-        <button>Scan for Access</button>
-        <div class="lost-card-toggle">
-            <p>Lost Card Mode:</p>
+        <div class="id-background">
+            <img src="UST-Logo.jpg" alt="University of St. Thomas Logo">
+        </div>
+        <div class="id-content">
+            <img id="profile-pic" src="profile-placeholder.png" alt="Profile Picture">
+            <input type="file" id="upload-pic" accept="image/*" onchange="uploadProfilePic(event)">
+            <h2>University of St. Thomas</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Student ID:</strong> 123456789</p>
+            <button>Scan for Access</button>
             <label class="toggle-switch">
                 <input type="checkbox" id="lost-card" onchange="toggleLostCard()">
                 <span class="slider"></span>
             </label>
         </div>
     </div>
-
-    <div class="notifications">
+    
+    <div class="alerts">
         <h3>Campus Alerts</h3>
-        <p>🔔 Dining hall closes at 8:00 PM</p>
-        <p>🔔 Class schedule updated for tomorrow</p>
-        <p>🔔 Emergency drill scheduled for Friday</p>
+        <ul>
+            <li>⚠️ Dining hall closes at 8:00 PM</li>
+            <li>⚠️ Class schedule updated for tomorrow</li>
+            <li>⚠️ Emergency drill scheduled for Friday</li>
+        </ul>
     </div>
-
-<script src="script.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
 </body>
 </html>
