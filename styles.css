@@ -1,98 +1,106 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: black url('UST%20Logo.jpg') no-repeat center center fixed;
-    background-size: contain;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
 }
 
-.menu-icon {
-    font-size: 24px;
+/* Navigation Menu */
+nav {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
-    background: #4b2c82;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-toggle {
+    background: purple;
     color: white;
-    padding: 5px 10px;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
     border-radius: 5px;
 }
 
-.menu {
+#menu {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background: #4b2c82;
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
-}
-
-.menu ul {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: purple;
     list-style: none;
-    padding: 0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.menu ul li {
-    padding: 10px 0;
+#menu li {
+    margin: 10px 0;
 }
 
-.menu ul li a {
+#menu a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
 }
 
-.close-menu {
-    display: block;
-    text-align: right;
-    cursor: pointer;
-    font-size: 20px;
-}
-
+/* ID Card Styling */
 .id-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 30px auto; /* Adjusted margin to move it up */
     position: relative;
-    z-index: 2; /* Ensure it's above the background */
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
 }
 
+/* Background Logo */
+.id-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+.id-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Profile Picture */
 #profile-pic {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    cursor: pointer;
-    object-fit: cover; /* Ensure image fits properly */
+    object-fit: cover;
+    margin: 10px;
 }
 
-#profile-pic-upload {
-    display: none;
+#upload-pic {
+    display: block;
+    margin: 10px auto;
 }
 
-/* Toggle switch styling */
-.lost-card-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-}
-
+/* Toggle Switch */
 .toggle-switch {
     position: relative;
+    display: inline-block;
     width: 50px;
     height: 25px;
 }
 
 .toggle-switch input {
-    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
@@ -102,7 +110,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: gray;
     border-radius: 25px;
     transition: 0.3s;
 }
@@ -110,30 +118,41 @@ body {
 .slider:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 3px;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2px;
     background-color: white;
     border-radius: 50%;
     transition: 0.3s;
 }
 
 input:checked + .slider {
-    background-color: #007bff;
+    background-color: purple;
 }
 
 input:checked + .slider:before {
-    transform: translateX(25px);
+    transform: translateX(24px);
 }
 
-/* Campus Alerts moved further down */
-.notifications {
-    background: #4b2c82; /* Changed to purple */
-    color: white; /* Ensuring text is visible */
-    padding: 10px;
-    margin-top: 160px; /* Moved further down */
-    border-radius: 5px;
-    position: relative;
-    z-index: 1;
+/* Campus Alerts */
+.alerts {
+    background: purple;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.alerts h3 {
+    color: white;
+}
+
+.alerts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alerts li {
+    margin: 5px 0;
 }
