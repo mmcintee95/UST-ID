@@ -19,8 +19,10 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0.2;
-    z-index: -1;
+    background: url('USTLogo.jpg') no-repeat center center;
+    background-size: cover;
 }
+
 .page-background img {
     width: 100%;
     height: auto;
