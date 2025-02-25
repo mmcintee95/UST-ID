@@ -18,14 +18,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.2;
     background: url('USTLogo.jpg') no-repeat center center;
     background-size: cover;
-}
-
-.page-background img {
-    width: 100%;
-    height: auto;
+    opacity: 0.2;
 }
 
 /* ID Card Styling */
