@@ -89,6 +89,11 @@ nav {
     font-weight: bold;
 }
 
+/* Fix for Hidden Menu Toggle */
+.hidden {
+    display: none;
+}
+
 /* Toggle Switch */
 .toggle-switch {
     position: relative;
