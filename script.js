@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector("#menu");
 
     menuToggle.addEventListener("click", function () {
-        menu.classList.toggle("hidden");
+        if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.style.display = "block";
+        } else {
+            menu.classList.add("hidden");
+            menu.style.display = "none";
+        }
     });
 });
