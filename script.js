@@ -18,18 +18,12 @@ function toggleLostCard() {
     }
 }
 
-// Function for the Three-Line Menu (Fixes Issue)
+// Function for the Three-Line Menu
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector("#menu");
 
     menuToggle.addEventListener("click", function () {
-        if (menu.classList.contains("hidden")) {
-            menu.classList.remove("hidden");
-            menu.style.display = "block";
-        } else {
-            menu.classList.add("hidden");
-            menu.style.display = "none";
-        }
+        menu.classList.toggle("hidden");
     });
 });
